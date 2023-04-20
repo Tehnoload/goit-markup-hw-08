@@ -1,0 +1,37 @@
+.section-about {
+  padding-bottom: 94px;
+}
+.about {
+  display: flex;
+  margin-left: -30px;
+  margin-top: 50px;
+  padding-left: 0;
+  outline: 1px tomato;
+}
+.about__item {
+  position: relative;
+  margin-left: 30px;
+  height: 294px;
+}
+.about__box-bg {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.about__box-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
