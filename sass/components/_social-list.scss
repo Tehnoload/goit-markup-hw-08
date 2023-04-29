@@ -1,7 +1,7 @@
 .social-list {
   display: flex;
   padding-left: 0;
-  justify-content: space-between;
+  justify-content: center;
 }
 .social-link {
   display: flex;
@@ -24,4 +24,7 @@
   .social-link:focus & {
     fill: var(--primary-white-color);
   }
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
 }

@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header>
+    <header class="header">
       <div class="container head">
         <nav class="navigation">
           <a href="./index.html" class="logo"><span>Web</span>Studio</a>
@@ -50,6 +50,13 @@
                   height="12"
                 ></use>
               </svg>
+              <svg class="address-nav__mail-tablet">
+                <use
+                  href="./images/icons.svg#icon-mail"
+                  width="14"
+                  height="10"
+                ></use>
+              </svg>
               info@devstudio.com</a
             >
           </li>
@@ -62,10 +69,70 @@
                   height="16"
                 ></use>
               </svg>
+              <svg class="address-nav__mail-tablet telephone">
+                <use
+                  href="./images/icons.svg#icon-telephone"
+                  width="10"
+                  height="14"
+                ></use>
+              </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button type="button" class="burger-menu-btn js-open-menu">
+          <svg class="burger-menu-btn-icon" width="40" height="40">
+            <use href="./images/icons.svg#burger-menu-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu js-menu-container" id="menu">
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-btn js-close-menu">
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-mobile-40px"></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+              <a href="./index.html" class="mobile-nav__link activ">Студія</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="./portfolio.html" class="mobile-nav__link">Портфоліо</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="#Контакти" class="mobile-nav__link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mobile-contacts-list">
+            <li class="mobile-contacts-item">
+              <a href="tel:+380961111111" class="mobile-contacts-list__tel"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts-item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-contacts-list__mail"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social-list">
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-list__link">Instagram</a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-list__link">Twitter</a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-list__link">Facebook</a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-list__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -155,37 +222,61 @@
           <h2 class="title-second">Чим ми займаємося</h2>
           <ul class="about">
             <li class="about__item">
-              <img
-                class="about__img"
-                src="./images/work/program.jpg"
-                alt="Руки на клавіатурі перед монітором"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/program.jpg    1x,
+                    ./images/work/program@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="about__img"
+                  src="./images/work/program.jpg"
+                  alt="Руки на клавіатурі перед монітором"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="about__box-bg">
                 <p class="about__box-text">Десктопні додатки</p>
               </div>
             </li>
             <li class="about__item">
-              <img
-                class="about__img"
-                src="./images/work/application.jpg"
-                alt="Людина тримає в руці мобільний телефон та працює за ноутбуком"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/application.jpg    1x,
+                    ./images/work/application@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="about__img"
+                  src="./images/work/application.jpg"
+                  alt="Людина тримає в руці мобільний телефон та працює за ноутбуком"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="about__box-bg">
                 <p class="about__box-text">Мобільні додатки</p>
               </div>
             </li>
             <li class="about__item">
-              <img
-                class="about__img"
-                src="./images/work/design.jpg"
-                alt="Людина працює на планшеті з палітрою кольорів"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/design.jpg    1x,
+                    ./images/work/design@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="about__img"
+                  src="./images/work/design.jpg"
+                  alt="Людина працює на планшеті з палітрою кольорів"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <div class="about__box-bg">
                 <p class="about__box-text">Дизайнерські рішення</p>
               </div>
@@ -199,13 +290,38 @@
           <h2 class="title-second">Наша команда</h2>
           <ul class="command-list">
             <li class="command-item">
-              <img
-                class="img"
-                src="./images/our-team/igor-demianenko.jpg"
-                alt="Хлопець в окулярах посміхається"
-                width="270"
-                height="260"
-              />
+              <div class="command-list__foto">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/our-team/igor-demianenko.jpg    1x,
+                      ./images/our-team/igor-demianenko@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/our-team/igor-demianenko-tablet.jpg    1x,
+                      ./images/our-team/igor-demianenko-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:
+                768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/our-team/igor-demianenko-mobile.jpg    1x,
+                      ./images/our-team/igor-demianenko-mobile@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="img"
+                    src="./images/our-team/igor-demianenko.jpg"
+                    alt="Хлопець в окулярах посміхається"
+                  />
+                </picture>
+              </div>
+
               <div class="description">
                 <h3 class="name">Ігор Дем'яненко</h3>
                 <p lang="en" class="profession">Product Designer</p>
@@ -242,13 +358,37 @@
               </div>
             </li>
             <li class="command-item">
-              <img
-                class="img"
-                src="./images/our-team/olga-repina.jpg"
-                alt="Дівчина посміхається"
-                width="270"
-                height="260"
-              />
+              <div class="command-list__foto">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/our-team/olga-repina.jpg    1x,
+                      ./images/our-team/olga-repina@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/our-team/olga-repina-tablet.jpg    1x,
+                      ./images/our-team/olga-repina-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:
+                768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/our-team/olga-repina-mobile.jpg    1x,
+                      ./images/our-team/olga-repina-mobile@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="img"
+                    src="./images/our-team/olga-repina.jpg"
+                    alt="Дівчина посміхається"
+                  />
+                </picture>
+              </div>
               <div class="description">
                 <h3 class="name">Ольга Рєпіна</h3>
                 <p lang="en" class="profession">Frontend Developer</p>
@@ -285,13 +425,37 @@
               </div>
             </li>
             <li class="command-item">
-              <img
-                class="img"
-                src="./images/our-team/mykola-tarasov.jpg"
-                alt="Хлопець посміхається"
-                width="270"
-                height="260"
-              />
+              <div class="command-list__foto">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/our-team/mykola-tarasov.jpg    1x,
+                      ./images/our-team/mykola-tarasov@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/our-team/mykola-tarasov-tablet.jpg    1x,
+                      ./images/our-team/mykola-tarasov-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:
+                768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/our-team/mykola-tarasov-mobile.jpg    1x,
+                      ./images/our-team/mykola-tarasov-mobile@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="img"
+                    src="./images/our-team/mykola-tarasov.jpg"
+                    alt="Хлопець посміхається"
+                  />
+                </picture>
+              </div>
               <div class="description">
                 <h3 class="name">Микола Тарасов</h3>
                 <p lang="en" class="profession">Marketing</p>
@@ -328,13 +492,37 @@
               </div>
             </li>
             <li class="command-item">
-              <img
-                class="img"
-                src="./images/our-team/mykhailo-ermakov.jpg"
-                alt="Хлопець в окулярах посміхається"
-                width="270"
-                height="260"
-              />
+              <div class="command-list__foto">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/our-team/mykhailo-ermakov.jpg    1x,
+                      ./images/our-team/mykhailo-ermakov@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/our-team/mykhailo-ermakov-tablet.jpg    1x,
+                      ./images/our-team/mykhailo-ermakov-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:
+                768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/our-team/mykhailo-ermakov-mobile.jpg    1x,
+                      ./images/our-team/mykhailo-ermakov-mobile@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="img"
+                    src="./images/our-team/mykhailo-ermakov.jpg"
+                    alt="Хлопець в окулярах посміхається"
+                  />
+                </picture>
+              </div>
               <div class="description">
                 <h3 class="name">Михайло Єрмаков</h3>
                 <p lang="en" class="profession">UI Designer</p>
@@ -587,5 +775,13 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/menu.js"></script>
   </body>
 </html>

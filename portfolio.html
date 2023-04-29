@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header>
+    <header class="header">
       <div class="container head">
         <nav class="navigation">
           <a href="./index.html" class="logo"><span>Web</span>Studio</a>
@@ -66,6 +66,59 @@
             >
           </li>
         </ul>
+        <button type="button" class="burger-menu-btn js-open-menu">
+          <svg class="burger-menu-btn-icon" width="40" height="40">
+            <use href="./images/icons.svg#burger-menu-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu js-menu-container" id="menu">
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-btn js-close-menu">
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-mobile-40px"></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+              <a href="./index.html" class="mobile-nav__link activ">Студія</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="./portfolio.html" class="mobile-nav__link">Портфоліо</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="#Контакти" class="mobile-nav__link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mobile-contacts-list">
+            <li class="mobile-contacts-item">
+              <a href="tel:+380961111111" class="mobile-contacts-list__tel"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts-item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-contacts-list__mail"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social-list">
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-list__link">Instagram</a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-list__link">Twitter</a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-list__link">Facebook</a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-list__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -99,13 +152,35 @@
             <li class="project">
               <a class="project-link" href="">
                 <div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/tehnokriak.jpg"
-                    alt="На ноутбуці фото трьох людей"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tehnokriak.jpg    1x,
+                        ./images/portfolio/tehnokriak@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tehnokriak-tablet.jpg    1x,
+                        ./images/portfolio/tehnokriak-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tehnokriak-mobile.jpg    1x,
+                        ./images/portfolio/tehnokriak-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/tehnokriak.jpg"
+                      alt="На ноутбуці фото трьох людей"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -121,13 +196,35 @@
             <li class="project">
               <a class="project-link" href="">
                 <div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/poster.jpg"
-                    alt="Двоє хлопців грають у баскетбол"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/poster.jpg    1x,
+                        ./images/portfolio/poster@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-tablet.jpg    1x,
+                        ./images/portfolio/poster-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-mobile.jpg    1x,
+                        ./images/portfolio/poster-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/poster.jpg"
+                      alt="Двоє хлопців грають у баскетбол"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -145,13 +242,35 @@
             <li class="project">
               <a class="project-link" href="">
                 <div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/restoran.jpg"
-                    alt="Афіша ресторану"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/restoran.jpg    1x,
+                        ./images/portfolio/restoran@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/restoran-tablet.jpg    1x,
+                        ./images/portfolio/restoran-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/restoran-mobile.jpg    1x,
+                        ./images/portfolio/restoran-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/restoran.jpg"
+                      alt="Афіша ресторану"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -169,13 +288,35 @@
             <li class="project">
               <a class="project-link" href="">
                 <div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/proekt-prime.jpg"
-                    alt="Навушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-prime.jpg    1x,
+                        ./images/portfolio/proekt-prime@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-prime-tablet.jpg    1x,
+                        ./images/portfolio/proekt-prime-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-prime-mobile.jpg    1x,
+                        ./images/portfolio/proekt-prime-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/proekt-prime.jpg"
+                      alt="Навушники"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -193,13 +334,35 @@
             <li class="project">
               <a class="project-link" href="">
                 <div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/proekt-boxes.jpg"
-                    alt="Дві картонні коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-boxes.jpg    1x,
+                        ./images/portfolio/proekt-boxes@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-boxes-tablet.jpg    1x,
+                        ./images/portfolio/proekt-boxes-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-boxes-mobile.jpg    1x,
+                        ./images/portfolio/proekt-boxes-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/proekt-boxes.jpg"
+                      alt="Дві картонні коробки"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -217,13 +380,35 @@
             <li class="project">
               <a class="project-link" href="">
                 <div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/inspiration.jpg"
-                    alt="Монітор"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration.jpg    1x,
+                        ./images/portfolio/inspiration@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-tablet.jpg    1x,
+                        ./images/portfolio/inspiration-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-mobile.jpg    1x,
+                        ./images/portfolio/inspiration-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/inspiration.jpg"
+                      alt="Монітор"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -241,13 +426,35 @@
             <li class="project">
               <a class="project-link" href=""
                 ><div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/limited-edition.jpg"
-                    alt="Розкритий журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition.jpg    1x,
+                        ./images/portfolio/limited-edition@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-tablet.jpg    1x,
+                        ./images/portfolio/limited-edition-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-mobile.jpg    1x,
+                        ./images/portfolio/limited-edition-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/limited-edition.jpg"
+                      alt="Розкритий журнал"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -265,13 +472,35 @@
             <li class="project">
               <a class="project-link" href=""
                 ><div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/proekt-lab.jpg"
-                    alt="Бірка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-lab.jpg    1x,
+                        ./images/portfolio/proekt-lab@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-lab-tablet.jpg    1x,
+                        ./images/portfolio/proekt-lab-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-lab-mobile.jpg    1x,
+                        ./images/portfolio/proekt-lab-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/proekt-lab.jpg"
+                      alt="Бірка"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -289,13 +518,35 @@
             <li class="project">
               <a class="project-link" href=""
                 ><div class="project-back">
-                  <img
-                    class="project-img"
-                    src="./images/portfolio/growing.jpg"
-                    alt="Людина працює за ноутбуком"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/growing.jpg    1x,
+                        ./images/portfolio/growing@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-tablet.jpg    1x,
+                        ./images/portfolio/growing-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:
+                768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-mobile.jpg    1x,
+                        ./images/portfolio/growing-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="project-img"
+                      src="./images/portfolio/growing.jpg"
+                      alt="Людина працює за ноутбуком"
+                    />
+                  </picture>
                   <p class="project-about">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
