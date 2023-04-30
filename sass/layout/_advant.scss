@@ -25,6 +25,8 @@
   height: 70px;
 }
 .item {
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -40,6 +42,7 @@
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .advant {
     display: flex;
@@ -49,11 +52,22 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .item {
+    display: flex;
+    justify-content: start;
+  }
   .advant__item {
     &:nth-child(even) {
       margin-left: 30px;
     }
     width: 354px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
   }
 
   .advant__icon {
@@ -62,17 +76,22 @@
   }
 }
 @media screen and (min-width: 1200px) {
+  .item {
+    display: flex;
+    justify-content: start;
+  }
   .advant__item {
     width: 270px;
+
     &:not(:last-child) {
       margin-right: 30px;
+      margin-bottom: 0;
     }
     &:nth-child(even) {
       margin-left: 0;
     }
   }
   .advant__icon {
-    width: 270px;
   }
   .advant {
     display: flex;
